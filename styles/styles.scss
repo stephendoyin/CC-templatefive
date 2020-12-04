@@ -1,0 +1,268 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&display=swap");
+html {
+  font-size: 13px;
+}
+
+@media only screen and (min-width: 767px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media only screen and (min-width: 922px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #222335;
+}
+
+.navigation {
+  height: 99px;
+  width: 100%;
+  z-index: 100;
+  position: relative;
+  top: 0;
+  left: 0;
+
+  &__inner {
+    width: 100%;
+  }
+
+  &__link {
+    margin-left: 2.5rem;
+    text-decoration: none !important;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 500;
+    &:hover {
+      color: #fff;
+    }
+  }
+}
+
+p {
+  font-weight: 300;
+}
+
+.hero {
+  padding: 16rem 0 7rem 0;
+  z-index: 0;
+  &__title {
+    font-size: 3rem;
+    font-weight: 900;
+  }
+
+  &__bg {
+    content: "";
+    height: 85%;
+    width: 100%;
+    background: #091e53;
+    z-index: -1;
+    position: absolute;
+    top: -56px;
+    right: 0;
+    transform: skewY(-7deg) translateY(-125px);
+  }
+}
+
+.btn {
+  border-radius: 60px;
+  min-width: 160px;
+  font-weight: 600;
+  line-height: 40px;
+
+  &-primary {
+    background: #012b88;
+    border: #012b88;
+    color: #fff !important;
+  }
+
+  &-white {
+    background: #fff;
+    color: #012b88;
+  }
+}
+
+.card {
+  &__body {
+    padding: 2rem 1.7rem;
+    border: 1px solid #eee;
+    box-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08),
+      0px 24px 32px rgba(50, 50, 71, 0.08);
+    background: #fff;
+
+    &__round {
+      border-radius: 2rem 8px 8px 8px;
+    }
+  }
+  &__icon-container {
+    height: 60px;
+    width: 60px;
+    background: #1942a8;
+    border-radius: 50%;
+    position: relative;
+    span {
+      color: rgba(255, 255, 255, 0.507);
+      font-weight: 700;
+      font-size: 2.4rem;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translate(50%, -50%);
+    }
+  }
+}
+
+section {
+  padding: 6rem 0;
+}
+
+.section {
+  &__bg {
+    width: 44%;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    &--right {
+      right: 0;
+      left: unset;
+    }
+    &__img {
+      background: url(../assets/images/count-bg.jpg);
+      background-size: cover;
+      // background-attachment: fixed;
+      background-position: center;
+      padding: 4rem 0;
+    }
+  }
+  &__ellipse {
+    background: url(../assets/images/curve.png);
+    background-position: center top;
+    background-size: cover;
+    padding-bottom: 0;
+  }
+
+  &__colored {
+    background: #f8f7ff;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  font-family: "Pt sans", sans-serif;
+
+  &--small {
+    font-size: 1.3rem;
+  }
+
+  &--bigger {
+    font-size: 3rem;
+    font-weight: 500;
+  }
+  &__wrapper {
+    min-width: 100%;
+    transform: translateY(0rem);
+    margin-top: 5rem;
+    &__pattern {
+      position: absolute;
+      right: 0;
+      top: -5.5rem;
+      z-index: 0;
+    }
+  }
+}
+
+.sub {
+  color: #37b5ff;
+  font-size: 0.9rem;
+}
+
+.container {
+  z-index: 2;
+}
+
+.dot-pattern {
+  max-width: 180px;
+  bottom: 40%;
+  left: -10%;
+}
+
+.count__card {
+  padding: 1.5rem;
+  height: 100%;
+}
+
+.custom-round {
+  border-radius: 7px;
+}
+
+.strip {
+  background: #002474;
+  padding: 1.5rem 2rem;
+  transform: translateY(50%);
+  box-shadow: 0px 20px 20px rgba(50, 50, 71, 0.1),
+    0px 32px 40px rgba(50, 50, 71, 0.1);
+  border-radius: 19px;
+  margin-bottom: 27%;
+}
+
+.footer {
+  padding: 5rem 0;
+
+  &__link {
+    margin-left: 2rem;
+    display: inline-block;
+    color: #032752;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+@media only screen and (min-width: 767px) {
+  .strip {
+    margin-bottom: 9%;
+  }
+  .title__wrapper {
+    min-width: 50%;
+    transform: translateY(3rem);
+    margin-top: 0;
+  }
+}
+
+.bg-purple {
+  background: #c1aef8;
+}
+
+.bg-blue {
+  background: #b5f2e3;
+}
+
+.bg-pink-dark {
+  background: #f8aec3;
+}
+
+.bg-pink {
+  background: #facfca;
+}
+
+.mark-up {
+  &__container {
+    width: 100%;
+    position: relative;
+  }
+
+  &__main {
+    background: #fff;
+    border-radius: 8px;
+    width: 100%;
+    min-height: 730px;
+    box-shadow: 0px 20px 20px rgba(50, 50, 71, 0.1),
+      0px 32px 40px rgba(50, 50, 71, 0.1);
+  }
+}
