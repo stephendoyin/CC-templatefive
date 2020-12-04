@@ -3,6 +3,10 @@ html {
   font-size: 13px;
 }
 
+:root {
+  --height: 320px;
+}
+
 @media only screen and (min-width: 767px) {
   html {
     font-size: 14px;
@@ -11,6 +15,9 @@ html {
 @media only screen and (min-width: 922px) {
   html {
     font-size: 16px;
+  }
+  :root {
+    --height: 620px;
   }
 }
 
@@ -48,7 +55,7 @@ p {
 }
 
 .hero {
-  padding: 16rem 0 7rem 0;
+  padding: 11rem 0 3rem 0;
   z-index: 0;
   &__title {
     font-size: 3rem;
@@ -57,7 +64,7 @@ p {
 
   &__bg {
     content: "";
-    height: 85%;
+    height: 100%;
     width: 100%;
     background: #091e53;
     z-index: -1;
@@ -255,14 +262,55 @@ section {
   &__container {
     width: 100%;
     position: relative;
+    min-height: var(--height);
   }
 
   &__main {
     background: #fff;
-    border-radius: 8px;
-    width: 100%;
-    min-height: 730px;
+    border-radius: 12px;
+    width: 90%;
+    height: 100%;
     box-shadow: 0px 20px 20px rgba(50, 50, 71, 0.1),
       0px 32px 40px rgba(50, 50, 71, 0.1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+  }
+
+  &__second {
+    background: rgba(255, 255, 255, 0.81);
+    width: 95%;
+    position: absolute;
+    left: 0;
+    top: 35px;
+    height: calc(var(--height) - 70px);
+    z-index: 2;
+    box-shadow: 0px 20px 20px rgba(50, 50, 71, 0.1),
+      0px 32px 40px rgba(50, 50, 71, 0.1);
+    border-radius: 14px;
+  }
+  &__last {
+    background: rgba(255, 255, 255, 0.81);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 70px;
+    height: calc(var(--height) - 140px);
+    z-index: 1;
+    box-shadow: 0px 20px 20px rgba(50, 50, 71, 0.1),
+      0px 32px 40px rgba(50, 50, 71, 0.1);
+    border-radius: 14px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .mark-up__container {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    padding: 16rem 0 3rem 0;
   }
 }
